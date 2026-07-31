@@ -19,7 +19,7 @@ const Navbar = () => {
 
       <Link to="/" className="logo">
         <ShoppingCart className="brand-icon" aria-hidden="true" />
-        <span>Cartify</span>
+        <span>CartNova</span>
       </Link>
 
       {/* Menu */}
