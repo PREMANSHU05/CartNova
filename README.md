@@ -1,5 +1,4 @@
-# 🛒 Cartify - MERN E-Commerce Platform
-# 🛒 Cartify - MERN E-Commerce Platform
+# 🛒 CartNova - MERN E-Commerce Platform
 
 ![React](https://img.shields.io/badge/Frontend-React-blue)
 ![Node](https://img.shields.io/badge/Backend-Node.js-green)
@@ -8,7 +7,7 @@
 ![Razorpay](https://img.shields.io/badge/Payment-Razorpay-blue)
 ## 📌 Project Description
 
-Cartify is a full-stack e-commerce application built using the **MERN stack**.
+CartNova is a full-stack e-commerce application built using the **MERN stack**.
 
 It provides a complete online shopping experience with secure user authentication, product management, shopping cart, wishlist, order management, and online payment integration using Razorpay.
 
@@ -83,7 +82,7 @@ It provides a complete online shopping experience with secure user authenticatio
 # 📂 Project Structure
 
 ```
-Cartify
+CartNova
 │
 ├── frontend
 │   │
@@ -112,13 +111,13 @@ Cartify
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/PREMANSHU05/Cartify
+git clone https://github.com/PREMANSHU05/CartNova
 ```
 
 Go inside the project:
 
 ```bash
-cd Cartify
+cd CartNova
 ```
 
 ---
