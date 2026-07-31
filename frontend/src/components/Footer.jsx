@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Brand */}
 
         <div className="footer-section">
-          <h2>🛒 Cartify</h2>
+          <h2>🛒 CartNova</h2>
 
           <p>
             Shop smarter with premium products, amazing deals and a seamless
