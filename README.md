@@ -1,5 +1,11 @@
 # 🛒 Cartify - MERN E-Commerce Platform
+# 🛒 Cartify - MERN E-Commerce Platform
 
+![React](https://img.shields.io/badge/Frontend-React-blue)
+![Node](https://img.shields.io/badge/Backend-Node.js-green)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
+![Express](https://img.shields.io/badge/API-Express-black)
+![Razorpay](https://img.shields.io/badge/Payment-Razorpay-blue)
 ## 📌 Project Description
 
 Cartify is a full-stack e-commerce application built using the **MERN stack**.
