@@ -25,7 +25,7 @@ const generateInvoice = async (req, res) => {
 
     doc.pipe(res);
 
-    doc.fontSize(25).text("Cartify Invoice", {
+    doc.fontSize(25).text("CartNova Invoice", {
       align: "center",
     });
 
