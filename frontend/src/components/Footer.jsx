@@ -47,7 +47,7 @@ const Footer = () => {
 
           <p>
             <Mail size={18} />
-            support@cartify.com
+            support@cartNova.com
           </p>
 
           <p>
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-bottom">© 2026 Cartify. All Rights Reserved.</div>
+      <div className="footer-bottom">© 2026 CartNova. All Rights Reserved.</div>
     </footer>
   );
 };
