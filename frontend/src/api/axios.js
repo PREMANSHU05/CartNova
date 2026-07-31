@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "/api",
+  baseURL: "https://cartnova-backend-erst.onrender.com",
 });
 
 API.interceptors.request.use(
