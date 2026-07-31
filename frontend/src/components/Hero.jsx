@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <span className="hero-tag">🛒 Welcome to Cartify</span>
+        <span className="hero-tag">🛒 Welcome to CartNova</span>
 
         <h1>
           Shop Smarter,
