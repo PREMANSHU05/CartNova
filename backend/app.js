@@ -18,7 +18,7 @@ const invoiceRoutes = require("./routes/invoiceRoutes");
 const analyticsRoutes = require("./routes/adminAnalyticsRoutes");
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://cart-nova-five.vercel.app/"],
+    origin: ["http://localhost:5173", "https://cart-nova-fpva.vercel.app"],
     credentials: true,
   }),
 );
