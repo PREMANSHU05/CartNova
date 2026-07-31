@@ -1,0 +1,111 @@
+.admin-orders {
+  padding: 40px;
+
+  background: #f8fafc;
+
+  min-height: 100vh;
+}
+
+.admin-orders h1 {
+  margin-bottom: 30px;
+}
+
+.order-card {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.order-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.status-badge {
+  padding: 8px 15px;
+
+  border-radius: 20px;
+
+  font-weight: 600;
+}
+
+.pending {
+  background: #fef3c7;
+
+  color: #92400e;
+}
+
+.processing {
+  background: #dbeafe;
+
+  color: #1d4ed8;
+}
+
+.shipped {
+  background: #ede9fe;
+
+  color: #6d28d9;
+}
+
+.delivered {
+  background: #dcfce7;
+
+  color: #166534;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.payment-box {
+  background: #f8fafc;
+
+  padding: 15px;
+
+  border-radius: 12px;
+}
+
+.timeline {
+  margin-top: 25px;
+}
+
+.steps {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 15px;
+}
+
+.steps span {
+  padding: 8px 15px;
+
+  border-radius: 20px;
+
+  background: #e5e7eb;
+}
+
+.steps .active {
+  background: #2563eb;
+
+  color: white;
+}
+
+.change-status select {
+  margin-top: 25px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+}

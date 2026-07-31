@@ -1,0 +1,31 @@
+.related {
+  padding: 60px 8%;
+
+  background: #f8fafc;
+}
+
+.related h2 {
+  font-size: 35px;
+
+  margin-bottom: 30px;
+}
+
+.related-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}

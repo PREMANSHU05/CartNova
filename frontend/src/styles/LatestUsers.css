@@ -1,0 +1,34 @@
+.latest-users {
+  background: white;
+
+  margin-top: 40px;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.latest-users h2 {
+  margin-bottom: 20px;
+}
+
+.users-header,
+.user-row {
+  display: grid;
+
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+
+  padding: 15px;
+}
+
+.users-header {
+  font-weight: 700;
+
+  background: #f1f5f9;
+}
+
+.user-row {
+  border-bottom: 1px solid #e5e7eb;
+}

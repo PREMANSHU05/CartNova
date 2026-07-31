@@ -1,0 +1,41 @@
+const express = require("express");
+const cors = require("cors");
+const notfoundmiddleware = require("./middleware/notfoundmiddleware");
+const errormiddleware = require("./middleware/errormiddleware");
+const loggermiddleware = require("./middleware/loggermiddleware");
+const app = express();
+const authRoutes = require("./routes/authRoutes");
+const productRoutes = require("./routes/productRoutes");
+const cartRoutes = require("./routes/cartRoutes");
+const orderRoutes = require("./routes/orderRoutes");
+const paymentRoutes = require("./routes/paymentRoutes");
+const adminRoutes = require("./routes/adminRoutes");
+const userRoutes = require("./routes/userRoutes");
+const wishlistRoutes = require("./routes/wishlistRoutes");
+const reviewRoutes = require("./routes/reviewRoutes");
+const couponRoutes = require("./routes/couponRoutes");
+const invoiceRoutes = require("./routes/invoiceRoutes");
+const analyticsRoutes = require("./routes/adminAnalyticsRoutes");
+app.use(cors());
+app.use(express.json());
+app.use(loggermiddleware);
+
+app.get("/", (req, res) => {
+  res.send("welcome to cartify");
+});
+
+app.use("/api/auth", authRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/cart", cartRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/payment", paymentRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/wishlist", wishlistRoutes);
+app.use("/api/reviews", reviewRoutes);
+app.use("/api/coupons", couponRoutes);
+app.use("/api/invoice", invoiceRoutes);
+app.use("/api/analytics", analyticsRoutes);
+app.use(notfoundmiddleware);
+app.use(errormiddleware);
+module.exports = app;

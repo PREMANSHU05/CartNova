@@ -1,0 +1,134 @@
+.admin-users-container {
+  padding: 40px;
+
+  min-height: 100vh;
+
+  background: #f8fafc;
+}
+
+.admin-users-container h1 {
+  margin-bottom: 30px;
+
+  font-size: 32px;
+
+  color: #1e293b;
+}
+
+.users-table {
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+
+.users-header {
+  display: grid;
+
+  grid-template-columns: 1.5fr 2fr 1fr 0.8fr;
+
+  padding: 18px 25px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-weight: 600;
+}
+
+/* User Row */
+
+.users-row {
+  display: grid;
+
+  grid-template-columns: 1.5fr 2fr 1fr 0.8fr;
+
+  align-items: center;
+
+  padding: 18px 25px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  transition: 0.3s;
+}
+
+.users-row:hover {
+  background: #f8fafc;
+}
+
+/* Role Dropdown */
+
+.users-row select {
+  width: 120px;
+
+  padding: 8px 12px;
+
+  border-radius: 20px;
+
+  border: 1px solid #cbd5e1;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+/* Delete Button */
+
+.delete-user {
+  width: 40px;
+
+  height: 40px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.delete-user:hover {
+  background: #dc2626;
+
+  color: white;
+
+  transform: scale(1.1);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .users-header {
+    display: none;
+  }
+
+  .users-row {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-items: flex-start;
+  }
+}
+.no-users {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+}
