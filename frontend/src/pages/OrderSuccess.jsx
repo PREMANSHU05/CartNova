@@ -10,7 +10,7 @@ const OrderSuccess = () => {
 
   const orderId = location.state?.orderId;
 
-  const downloadInvoice = () => {
+  const downloadInvoice = async () => {
     const token = localStorage.getItem("token");
 
     if (!token) {
@@ -18,34 +18,43 @@ const OrderSuccess = () => {
       return;
     }
 
-    fetch(`http://localhost:5000/api/invoice/${orderId}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then((response) => response.blob())
-      .then((blob) => {
-        const url = window.URL.createObjectURL(blob);
+    try {
+      const response = await fetch(
+        `https://cartnova-backend-erst.onrender.com/api/invoice/${orderId}`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
 
-        const a = document.createElement("a");
+      if (!response.ok) {
+        throw new Error("Invoice download failed");
+      }
 
-        a.href = url;
+      const blob = await response.blob();
 
-        a.download = `Invoice-${orderId}.pdf`;
+      const url = window.URL.createObjectURL(blob);
 
-        document.body.appendChild(a);
+      const link = document.createElement("a");
 
-        a.click();
+      link.href = url;
 
-        a.remove();
+      link.download = `Invoice-${orderId}.pdf`;
 
-        window.URL.revokeObjectURL(url);
-      })
-      .catch((err) => {
-        console.log(err);
+      document.body.appendChild(link);
 
-        alert("Unable to download invoice");
-      });
+      link.click();
+
+      link.remove();
+
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.log("Invoice Error:", error);
+
+      alert("Unable to download invoice");
+    }
   };
 
   return (
