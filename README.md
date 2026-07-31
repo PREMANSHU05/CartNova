@@ -106,7 +106,7 @@ Cartify
 ## 1. Clone Repository
 
 ```bash
-git clone your-repository-link
+git clone https://github.com/PREMANSHU05/Cartify
 ```
 
 Go inside the project:
