@@ -266,20 +266,7 @@ Order Confirmation
 
 ---
 
-# 📸 Screenshots
 
-Coming Soon...
-
-(Add screenshots of:)
-
-* Home Page
-* Products Page
-* Product Details
-* Cart Page
-* Checkout Page
-* Admin Dashboard
-
----
 
 # 🔮 Future Improvements
 
