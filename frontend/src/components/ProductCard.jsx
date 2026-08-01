@@ -13,8 +13,12 @@ const ProductCard = ({ product }) => {
 
   // Add To Cart
   const addToCart = async () => {
-    if (!localStorage.getItem("token")) {
+    const token = localStorage.getItem("token");
+
+    if (!token || token === "null" || token === "undefined") {
+      localStorage.removeItem("token");
       toast.error("Please log in or sign up to add items to your cart.");
+      window.location.assign("/login");
       return;
     }
 
@@ -29,11 +33,14 @@ const ProductCard = ({ product }) => {
     } catch (error) {
       console.log(error.response?.data || error.message);
 
-      toast.error(
-        error.response?.status === 401
-          ? "Please log in or sign up to add items to your cart."
-          : error.response?.data?.message || "Unable to add this item to your cart.",
-      );
+      if (error.response?.status === 401) {
+        localStorage.removeItem("token");
+        toast.error("Please log in or sign up to add items to your cart.");
+        window.location.assign("/login");
+        return;
+      }
+
+      toast.error(error.response?.data?.message || "Unable to add this item to your cart.");
     }
   };
 
