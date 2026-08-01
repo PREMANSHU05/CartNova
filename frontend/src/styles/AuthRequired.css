@@ -1,5 +1,5 @@
 .auth-required {
-  min-height: 65vh;
+  min-height: calc(100vh - 74px);
   display: grid;
   place-items: center;
   padding: 32px 20px;
@@ -10,8 +10,9 @@
   padding: 36px;
   text-align: center;
   background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e7ecf3;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
 }
 
 .auth-required-card h1 {
@@ -37,11 +38,17 @@
   border-radius: 9px;
   font-weight: 600;
   text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.auth-required-actions a:hover {
+  transform: translateY(-1px);
 }
 
 .auth-required-login {
   color: #fff;
   background: #2563eb;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
 }
 
 .auth-required-register {
