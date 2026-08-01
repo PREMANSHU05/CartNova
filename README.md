@@ -155,7 +155,7 @@ CLOUDINARY_NAME=your_cloud_name
 
 CLOUDINARY_API_KEY=your_api_key
 
-CLOUDINARY_SECRET=your_secret
+CLOUDINARY_API_SECRET=your_secret
 ```
 
 Run backend:

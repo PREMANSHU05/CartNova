@@ -15,6 +15,8 @@ const Profile = () => {
 
   const [loading, setLoading] = useState(true);
 
+  const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
+
   const getProfile = async () => {
     try {
       const { data } = await API.get("/users/profile");
@@ -40,16 +42,24 @@ const Profile = () => {
 
     if (!file) return;
 
+    if (!file.type.startsWith("image/")) {
+      toast.error("Please choose an image file");
+      e.target.value = "";
+      return;
+    }
+
+    if (file.size > MAX_IMAGE_SIZE) {
+      toast.error("Image must be 5 MB or smaller");
+      e.target.value = "";
+      return;
+    }
+
     const formData = new FormData();
 
     formData.append("image", file);
 
     try {
-      await API.put("/users/profile-image", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      await API.put("/users/profile-image", formData);
 
       toast.success("Profile image uploaded");
 
@@ -57,7 +67,10 @@ const Profile = () => {
     } catch (error) {
       console.log(error.response?.data || error.message);
 
-      toast.error("Image upload failed");
+      toast.error(error.response?.data?.message || "Image upload failed");
+    } finally {
+      // Allows the same file to be selected again after an upload attempt.
+      e.target.value = "";
     }
   };
 

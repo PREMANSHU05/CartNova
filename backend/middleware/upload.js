@@ -8,7 +8,8 @@ const storage = new CloudinaryStorage({
   params: {
     folder: "cartify-products",
 
-    allowed_formats: ["jpg", "png", "jpeg"],
+    resource_type: "image",
+    allowed_formats: ["jpg", "png", "jpeg", "webp", "gif", "avif"],
   },
 });
 
@@ -17,6 +18,13 @@ const upload = multer({
 
   limits: {
     fileSize: 5 * 1024 * 1024,
+  },
+  fileFilter: (req, file, callback) => {
+    if (!file.mimetype.startsWith("image/")) {
+      return callback(new Error("Only image files can be uploaded"));
+    }
+
+    callback(null, true);
   },
 });
 

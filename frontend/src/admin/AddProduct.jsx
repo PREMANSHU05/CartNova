@@ -20,6 +20,8 @@ const AddProduct = () => {
 
   const [preview, setPreview] = useState("");
 
+  const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -31,6 +33,18 @@ const AddProduct = () => {
     const file = e.target.files[0];
 
     if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      alert("Please choose an image file");
+      e.target.value = "";
+      return;
+    }
+
+    if (file.size > MAX_IMAGE_SIZE) {
+      alert("Image must be 5 MB or smaller");
+      e.target.value = "";
+      return;
+    }
 
     setImage(file);
 
@@ -54,17 +68,14 @@ const AddProduct = () => {
         data.append("image", image);
       }
 
-      await API.post("/products", data, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      await API.post("/products", data);
 
       alert("Product Added Successfully");
 
       navigate("/admin/products");
     } catch (error) {
       console.log(error.response?.data || error.message);
+      alert(error.response?.data?.message || "Unable to add product");
     }
   };
 
