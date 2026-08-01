@@ -13,6 +13,11 @@ const ProductCard = ({ product }) => {
 
   // Add To Cart
   const addToCart = async () => {
+    if (!localStorage.getItem("token")) {
+      toast.error("Please log in or sign up to add items to your cart.");
+      return;
+    }
+
     try {
       await API.post("/cart/add", {
         productId: product._id,
@@ -24,7 +29,11 @@ const ProductCard = ({ product }) => {
     } catch (error) {
       console.log(error.response?.data || error.message);
 
-      toast.error(error.response?.data?.message || "Please login first");
+      toast.error(
+        error.response?.status === 401
+          ? "Please log in or sign up to add items to your cart."
+          : error.response?.data?.message || "Unable to add this item to your cart.",
+      );
     }
   };
 
