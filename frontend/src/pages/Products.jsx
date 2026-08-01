@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import API from "../api/axios";
 import ProductCard from "../components/ProductCard";
 import "../styles/Products.css";
 
 const Products = () => {
+  const [searchParams] = useSearchParams();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState(searchParams.get("category") || "All");
   const [sort, setSort] = useState("");
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);

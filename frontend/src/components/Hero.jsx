@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingBag } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Hero.css";
 
@@ -9,7 +9,9 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <span className="hero-tag">🛒 Welcome to CartNova</span>
+        <span className="hero-tag">
+          <ShoppingBag size={15} /> Curated picks. Better prices.
+        </span>
 
         <h1>
           Shop Smarter,
@@ -27,7 +29,7 @@ const Hero = () => {
           <ArrowRight size={20} />
         </button>
 
-        <div className="hero-highlights" aria-label="Cartify benefits">
+        <div className="hero-highlights" aria-label="CartNova benefits">
           <div>
             <strong>10k+</strong>
             <span>Happy shoppers</span>
