@@ -1,0 +1,60 @@
+.auth-required {
+  min-height: 65vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+}
+
+.auth-required-card {
+  width: min(100%, 480px);
+  padding: 36px;
+  text-align: center;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-required-card h1 {
+  margin: 0 0 12px;
+  color: #1f2937;
+}
+
+.auth-required-card p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.auth-required-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.auth-required-actions a {
+  padding: 11px 18px;
+  border-radius: 9px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-required-login {
+  color: #fff;
+  background: #2563eb;
+}
+
+.auth-required-register {
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+@media (max-width: 420px) {
+  .auth-required-card {
+    padding: 28px 20px;
+  }
+
+  .auth-required-actions {
+    flex-direction: column;
+  }
+}
