@@ -77,7 +77,6 @@ const MyOrders = () => {
       ) : (
         orders.map((order) => (
           <div className="order-card" key={order._id}>
-            {/* Header */}
 
             <div className="order-header">
               <div>
@@ -101,7 +100,6 @@ const MyOrders = () => {
               Date: {new Date(order.createdAt).toLocaleDateString("en-IN")}
             </p>
 
-            {/* Products */}
 
             <div className="ordered-products">
               {order.items?.map((item) => (
@@ -122,7 +120,6 @@ const MyOrders = () => {
               ))}
             </div>
 
-            {/* Total */}
 
             <div className="total-box">
               <span>Total Amount:</span>
@@ -130,7 +127,6 @@ const MyOrders = () => {
               <strong>₹{order.totalPrice}</strong>
             </div>
 
-            {/* Order Tracking */}
 
             <div className="status-wrapper">
               {statusSteps.map((status, index) => {

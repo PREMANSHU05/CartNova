@@ -7,7 +7,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Brand */}
 
         <div className="footer-section">
           <h2>🛒 CartNova</h2>
@@ -26,7 +25,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Quick Links */}
 
         <div className="footer-section">
           <h3>Quick Links</h3>
@@ -40,7 +38,6 @@ const Footer = () => {
           <a href="/orders">Orders</a>
         </div>
 
-        {/* Support */}
 
         <div className="footer-section">
           <h3>Customer Support</h3>

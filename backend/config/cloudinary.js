@@ -5,7 +5,6 @@ cloudinary.config({
 
   api_key: process.env.CLOUDINARY_API_KEY,
 
-  // Support the documented variable name as well as the standard API name.
   api_secret: process.env.CLOUDINARY_API_SECRET || process.env.CLOUDINARY_SECRET,
 });
 

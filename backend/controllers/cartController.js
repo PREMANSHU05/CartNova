@@ -1,8 +1,5 @@
 const Cart = require("../models/Cart");
 
-// ===============================
-// Add Product To Cart
-// ===============================
 
 const addToCart = async (req, res) => {
   try {
@@ -60,9 +57,6 @@ const addToCart = async (req, res) => {
   }
 };
 
-// ===============================
-// Get User Cart
-// ===============================
 
 const getCart = async (req, res) => {
   try {
@@ -94,9 +88,6 @@ const getCart = async (req, res) => {
   }
 };
 
-// ===============================
-// Update Cart Quantity
-// ===============================
 
 const updateCartQuantity = async (req, res) => {
   try {
@@ -156,9 +147,6 @@ const updateCartQuantity = async (req, res) => {
   }
 };
 
-// ===============================
-// Remove Product From Cart
-// ===============================
 
 const removeFromCart = async (req, res) => {
   try {
@@ -198,9 +186,6 @@ const removeFromCart = async (req, res) => {
   }
 };
 
-// ===============================
-// Clear Cart
-// ===============================
 
 const clearCart = async (req, res) => {
   try {

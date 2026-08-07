@@ -11,7 +11,6 @@ const ProductCard = ({ product }) => {
 
   const [wishlisted, setWishlisted] = useState(false);
 
-  // Add To Cart
   const addToCart = async () => {
     const token = localStorage.getItem("token");
 
@@ -44,7 +43,6 @@ const ProductCard = ({ product }) => {
     }
   };
 
-  // Add Wishlist
   const addToWishlist = async (e) => {
     e.stopPropagation();
 

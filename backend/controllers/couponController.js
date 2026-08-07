@@ -1,6 +1,5 @@
 const Coupon = require("../models/Coupon");
 
-// Create Coupon (Admin)
 const createCoupon = async (req, res) => {
   try {
     const coupon = await Coupon.create(req.body);
@@ -17,7 +16,6 @@ const createCoupon = async (req, res) => {
   }
 };
 
-// Validate Coupon
 const applyCoupon = async (req, res) => {
   try {
     const { code, amount } = req.body;

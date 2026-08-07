@@ -14,7 +14,6 @@ const {
   getLatestUsers,
 } = require("../controllers/adminController");
 
-// Dashboard stats
 router.get("/stats", protect, admin, getAdminStats);
 
 router.get("/users", protect, admin, getAllUsers);

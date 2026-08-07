@@ -17,7 +17,6 @@ const AdminDashboard = () => {
 
   const [loading, setLoading] = useState(true);
 
-  // Dummy Revenue Data (Day 18)
   const revenueData = [
     { month: "Jan", revenue: 12000 },
     { month: "Feb", revenue: 18000 },
@@ -62,7 +61,6 @@ const AdminDashboard = () => {
     <div className="admin-dashboard">
       <h1>Admin Dashboard</h1>
 
-      {/* Statistics Cards */}
 
       <div className="stats-grid">
         <div className="stat-card">
@@ -106,7 +104,6 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      {/* Revenue Chart */}
 
       <RevenueChart data={revenueData} />
     </div>

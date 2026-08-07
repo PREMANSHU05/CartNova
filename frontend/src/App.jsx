@@ -11,7 +11,6 @@ import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import OrderSuccess from "./pages/OrderSuccess";
 
-// Admin Pages
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminProducts from "./admin/AdminProducts";
 import AddProduct from "./admin/AddProduct";
@@ -30,7 +29,6 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        {/* User Routes */}
 
         <Route path="/" element={<Home />} />
 
@@ -75,7 +73,6 @@ function App() {
 
         <Route path="/order-success" element={<OrderSuccess />} />
 
-        {/* Admin Routes */}
 
         <Route
           path="/admin"

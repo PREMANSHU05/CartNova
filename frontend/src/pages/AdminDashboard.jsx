@@ -71,7 +71,6 @@ const AdminDashboard = () => {
     <div className="admin-container">
       <h1 className="admin-title">Cartify Admin Dashboard</h1>
 
-      {/* Statistics Cards */}
 
       <div className="stats-grid">
         <div className="stat-card">
@@ -184,7 +183,6 @@ const AdminDashboard = () => {
       <RevenueChart data={[]} />
       <RecentOrders />
       <LatestUsers />
-      {/* Quick Actions */}
 
       <h2 className="quick-title">Quick Actions</h2>
 

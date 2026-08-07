@@ -35,7 +35,6 @@ const Profile = () => {
     getProfile();
   }, []);
 
-  // Upload Profile Image
 
   const uploadImage = async (e) => {
     const file = e.target.files[0];
@@ -69,7 +68,6 @@ const Profile = () => {
 
       toast.error(error.response?.data?.message || "Image upload failed");
     } finally {
-      // Allows the same file to be selected again after an upload attempt.
       e.target.value = "";
     }
   };
@@ -108,7 +106,6 @@ const Profile = () => {
 
         <h1>{user.name}</h1>
 
-        {/* Upload Image */}
 
         <label className="upload-btn">
           <Upload size={18} />

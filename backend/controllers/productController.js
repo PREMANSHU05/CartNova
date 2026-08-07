@@ -1,14 +1,10 @@
 const Product = require("../models/Product");
 
-// ===============================
-// Add Product
-// ===============================
 
 const addProduct = async (req, res) => {
   try {
     const { name, description, price, category, stock, status } = req.body;
 
-    // Cloudinary Image URL
     const image = req.file ? req.file.path : "https://via.placeholder.com/300";
 
     console.log("BODY:", req.body);
@@ -47,10 +43,6 @@ const addProduct = async (req, res) => {
   }
 };
 
-// ===============================
-// Get User Products
-// Search + Filter + Pagination
-// ===============================
 const getProducts = async (req, res) => {
   try {
     const page = Number(req.query.page) || 1;
@@ -61,7 +53,6 @@ const getProducts = async (req, res) => {
 
     const query = {};
 
-    // Search by product name
     if (keyword) {
       query.name = {
         $regex: keyword,
@@ -69,12 +60,10 @@ const getProducts = async (req, res) => {
       };
     }
 
-    // Filter by category
     if (category && category !== "All") {
       query.category = category;
     }
 
-    // Sorting
     let sortOption = {};
 
     switch (sort) {
@@ -124,9 +113,6 @@ const getProducts = async (req, res) => {
   }
 };
 
-// ===============================
-// Get Single Product
-// ===============================
 
 const getSingleProduct = async (req, res) => {
   try {
@@ -154,9 +140,6 @@ const getSingleProduct = async (req, res) => {
   }
 };
 
-// ===============================
-// Update Product
-// ===============================
 
 const updateProduct = async (req, res) => {
   try {
@@ -197,9 +180,6 @@ const updateProduct = async (req, res) => {
   }
 };
 
-// ===============================
-// Delete Product
-// ===============================
 
 const deleteProduct = async (req, res) => {
   try {
@@ -280,10 +260,6 @@ const addReview = async (req, res) => {
   }
 };
 
-// ===============================
-// Admin Get All Products
-// Active + Inactive
-// ===============================
 
 const getAdminProducts = async (req, res) => {
   try {

@@ -1,6 +1,5 @@
 const Wishlist = require("../models/Wishlist");
 
-// Add Product To Wishlist
 
 const addToWishlist = async (req, res) => {
   try {
@@ -46,7 +45,6 @@ const addToWishlist = async (req, res) => {
   }
 };
 
-// Get Wishlist
 
 const getWishlist = async (req, res) => {
   try {
@@ -68,7 +66,6 @@ const getWishlist = async (req, res) => {
   }
 };
 
-// Remove Product
 
 const removeFromWishlist = async (req, res) => {
   try {

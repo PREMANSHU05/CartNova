@@ -15,14 +15,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Logo */}
 
       <Link to="/" className="logo">
         <ShoppingCart className="brand-icon" aria-hidden="true" />
         <span>CartNova</span>
       </Link>
 
-      {/* Menu */}
 
       <div className="nav-links">
         <Link to="/">Home</Link>
@@ -46,7 +44,6 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Right Side */}
 
       <div className="nav-actions">
         {!token ? (

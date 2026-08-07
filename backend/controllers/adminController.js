@@ -2,9 +2,6 @@ const User = require("../models/user");
 const Product = require("../models/Product");
 const Order = require("../models/Order");
 
-// ===============================
-// Admin Dashboard Stats
-// ===============================
 
 const getAdminStats = async (req, res) => {
   try {
@@ -53,9 +50,6 @@ const getAdminStats = async (req, res) => {
   }
 };
 
-// ===============================
-// Get All Users
-// ===============================
 
 const getAllUsers = async (req, res) => {
   try {
@@ -75,9 +69,6 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-// ===============================
-// Delete User
-// ===============================
 
 const deleteUser = async (req, res) => {
   try {
@@ -107,9 +98,6 @@ const deleteUser = async (req, res) => {
   }
 };
 
-// ===============================
-// Update User Role
-// ===============================
 
 const updateUserRole = async (req, res) => {
   try {
@@ -142,9 +130,6 @@ const updateUserRole = async (req, res) => {
     });
   }
 };
-// ===============================
-// Get Recent Orders
-// ===============================
 
 const getRecentOrders = async (req, res) => {
   try {
@@ -164,9 +149,6 @@ const getRecentOrders = async (req, res) => {
     });
   }
 };
-// ===============================
-// Get Latest Users
-// ===============================
 
 const getLatestUsers = async (req, res) => {
   try {

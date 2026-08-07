@@ -6,7 +6,6 @@ const placeOrder = async (req, res) => {
   try {
     const { shippingAddress, discount = 0, totalPrice: finalPrice } = req.body;
 
-    // Find user's cart
     const cart = await Cart.findOne({
       user: req.user._id,
     }).populate("items.product");
@@ -18,7 +17,6 @@ const placeOrder = async (req, res) => {
       });
     }
 
-    // Remove deleted products from cart
     const validItems = cart.items.filter((item) => item.product !== null);
 
     if (validItems.length === 0) {
@@ -28,14 +26,12 @@ const placeOrder = async (req, res) => {
       });
     }
 
-    // Calculate total price
     let totalPrice = 0;
 
     validItems.forEach((item) => {
       totalPrice += item.product.price * item.quantity;
     });
 
-    // Create order
     const order = await Order.create({
       user: req.user._id,
 
@@ -51,7 +47,6 @@ const placeOrder = async (req, res) => {
       shippingAddress,
     });
 
-    // Clear cart
     cart.items = [];
 
     await cart.save();
@@ -103,7 +98,6 @@ const getSingleOrder = async (req, res) => {
       });
     }
 
-    // Allow only the owner or an admin to view the order
     if (
       order.user._id.toString() !== req.user._id.toString() &&
       req.user.role !== "admin"

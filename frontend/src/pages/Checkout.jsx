@@ -92,7 +92,6 @@ const Checkout = () => {
     }
 
     try {
-      // Create order in database
 
       const orderResponse = await API.post("/orders", {
         shippingAddress: address,
@@ -102,7 +101,6 @@ const Checkout = () => {
 
       const order = orderResponse.data.order;
 
-      // Create Razorpay order
 
       const paymentResponse = await API.post("/payment/create", {
         amount: finalAmount || totalPrice,

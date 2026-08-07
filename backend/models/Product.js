@@ -40,14 +40,12 @@ const productSchema = new mongoose.Schema(
       },
     ],
 
-    // Product Status
     status: {
       type: String,
       enum: ["active", "inactive"],
       default: "active",
     },
 
-    // Reviews and Ratings
     rating: {
       type: Number,
       default: 0,

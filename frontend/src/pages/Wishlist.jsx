@@ -8,7 +8,6 @@ import "../styles/Wishlist.css";
 const Wishlist = () => {
   const [wishlist, setWishlist] = useState([]);
 
-  // Get Wishlist
   const getWishlist = async () => {
     try {
       const { data } = await API.get("/wishlist");
@@ -25,7 +24,6 @@ const Wishlist = () => {
     getWishlist();
   }, []);
 
-  // Remove Wishlist
   const removeWishlist = async (id) => {
     try {
       await API.delete(`/wishlist/remove/${id}`);
@@ -40,7 +38,6 @@ const Wishlist = () => {
     }
   };
 
-  // Add To Cart
   const addToCart = async (id) => {
     try {
       await API.post("/cart/add", {

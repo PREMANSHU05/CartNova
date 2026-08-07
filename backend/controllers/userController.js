@@ -1,8 +1,5 @@
 const User = require("../models/user");
 
-// ===============================
-// Get User Profile
-// ===============================
 const getProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select("-password");
@@ -18,9 +15,6 @@ const getProfile = async (req, res) => {
     });
   }
 };
-// ===============================
-// Update User Profile
-// ===============================
 
 const updateProfile = async (req, res) => {
   try {
@@ -61,13 +55,7 @@ const updateProfile = async (req, res) => {
     });
   }
 };
-// ===============================
-// Upload Profile Image
-// ===============================
 
-// ===============================
-// Upload Profile Image
-// ===============================
 
 const uploadProfileImage = async (req, res) => {
   try {
@@ -89,7 +77,6 @@ const uploadProfileImage = async (req, res) => {
       });
     }
 
-    // CloudinaryStorage already uploads image
     user.profileImage = req.file.path;
 
     await user.save();

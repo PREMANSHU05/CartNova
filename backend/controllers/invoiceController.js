@@ -1,7 +1,6 @@
 const Order = require("../models/Order");
 const PDFDocument = require("pdfkit");
 
-// Generate Invoice PDF
 const generateInvoice = async (req, res) => {
   try {
     const order = await Order.findById(req.params.orderId)

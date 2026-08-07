@@ -142,7 +142,6 @@ const ProductDetails = () => {
   return (
     <>
       <div className="product-details">
-        {/* Image Section */}
 
         <motion.div
           className="product-image"
@@ -161,7 +160,6 @@ const ProductDetails = () => {
           </div>
         </motion.div>
 
-        {/* Details */}
 
         <motion.div
           className="product-info"
@@ -206,7 +204,6 @@ const ProductDetails = () => {
 
           <h4>{product.stock > 0 ? "🟢 In Stock" : "🔴 Out of Stock"}</h4>
 
-          {/* Quantity */}
 
           <div className="quantity-box">
             <button onClick={() => setQuantity(Math.max(1, quantity - 1))}>

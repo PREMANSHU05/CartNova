@@ -3,7 +3,6 @@ const User = require("../models/user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// REGISTER USER
 
 const registerUser = async (req, res) => {
   try {
@@ -48,7 +47,6 @@ const registerUser = async (req, res) => {
   }
 };
 
-// LOGIN USER
 
 const loginUser = async (req, res) => {
   try {
@@ -118,7 +116,6 @@ const loginUser = async (req, res) => {
   }
 };
 
-// FORGOT PASSWORD
 
 const forgotPassword = async (req, res) => {
   try {
@@ -198,7 +195,6 @@ const resetPassword = async (req, res) => {
   }
 };
 
-// PROFILE
 
 const getProfile = async (req, res) => {
   res.json({
@@ -208,7 +204,6 @@ const getProfile = async (req, res) => {
   });
 };
 
-// ADMIN
 
 const adminDashboard = (req, res) => {
   res.json({

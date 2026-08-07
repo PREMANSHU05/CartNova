@@ -12,13 +12,10 @@ const {
   uploadProfileImage,
 } = require("../controllers/userController");
 
-// Get Profile
 router.get("/profile", protect, getProfile);
 
-// Update Profile
 router.put("/profile", protect, updateProfile);
 
-// Upload Profile Image
 router.put(
   "/profile-image",
   protect,

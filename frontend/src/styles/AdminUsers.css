@@ -24,7 +24,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Header */
 
 .users-header {
   display: grid;
@@ -40,7 +39,6 @@
   font-weight: 600;
 }
 
-/* User Row */
 
 .users-row {
   display: grid;
@@ -60,7 +58,6 @@
   background: #f8fafc;
 }
 
-/* Role Dropdown */
 
 .users-row select {
   width: 120px;
@@ -76,7 +73,6 @@
   font-weight: 600;
 }
 
-/* Delete Button */
 
 .delete-user {
   width: 40px;
@@ -110,7 +106,6 @@
   transform: scale(1.1);
 }
 
-/* Responsive */
 
 @media (max-width: 768px) {
   .users-header {

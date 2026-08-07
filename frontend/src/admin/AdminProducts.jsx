@@ -28,7 +28,6 @@ const AdminProducts = () => {
     fetchProducts();
   }, [page, search, category]);
 
-  // Delete Product
 
   const deleteProduct = async (id) => {
     const confirmDelete = window.confirm(
@@ -46,7 +45,6 @@ const AdminProducts = () => {
     }
   };
 
-  // Change Product Status
 
   const changeStatus = async (id, status) => {
     try {
@@ -70,7 +68,6 @@ const AdminProducts = () => {
         </button>
       </div>
 
-      {/* Search Filter */}
 
       <div className="product-controls">
         <input
@@ -132,7 +129,6 @@ const AdminProducts = () => {
 
               <td>₹{product.price}</td>
 
-              {/* Status */}
 
               <td>
                 <select
@@ -165,7 +161,6 @@ const AdminProducts = () => {
         </tbody>
       </table>
 
-      {/* Pagination */}
 
       <div className="pagination">
         {Array.from({ length: totalPages }, (_, index) => (
